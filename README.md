@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# Upvote Technical Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the code for the Upvote Technical Challenge.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://thminggg.github.io/scrawlr-upvote/
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Install npm packages:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+yarn
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Run the development server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+yarn dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Testing
+
+Run the test:
+
+```bash
+yarn test
+```
+
+## Tech Stack
+
+- [Vite](https://vitejs.dev/)
+- [Vitest](https://vitest.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
+- [Vitest](https://vitest.dev/)
+- [nvm](https://github.com/nvm-sh/nvm)
+- [yarn](https://yarnpkg.com/)
+- [Path Alias](https://www.typescriptlang.org/tsconfig/#paths)
+- [TailwindCSS](https://tailwindcss.com/)
+- [GitActions](https://docs.github.com/en/actions)
+
+## Folder Strucutre
+
+Folders and files that I have worked on for the assignment
+
+```
+scrawlr-upvote/
+├── src/
+│   ├── components/
+│   │   ├── Upvote/
+│   │   │   └── Upvote.tsx
+│   │   ├── UpvoteList/
+│   │   │   ├── UpvoteList.tsx
+│   │   │   └── UpvoteList.test.tsx
+│   ├── context/
+│   │   └── UpvoteContext.tsx
+│   ├── utils/
+│   │   └── genId.ts
+│   ├── App.tsx
+│   ├── inedx.css
+│   └── main.tsx
+├── .nvmrc
+├── package.json
+├── README.md
+├── setupTests.ts
+├── tailwind.config.js
+├── tsconfig.app.json
+├── vite.config.ts
+└── yarn.lock
 ```
